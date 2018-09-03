@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tracker_unit"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/tracker_unit_clock_count"
+        android:layout_width="@dimen/tracker_unit_height"
+        android:layout_height="@dimen/tracker_unit_height"
+        android:layout_centerVertical="true"
+        android:background="@android:color/holo_blue_light"
+        android:gravity="center_vertical|center_horizontal"
+        android:textAlignment="center" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/tracker_unit_height"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/tracker_unit_clock_count"
+        android:background="?android:selectableItemBackground"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:padding="@dimen/standard_padding">
+
+        <TextView
+            android:id="@+id/tracker_unit_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/standard_font_size" />
+
+        <TextView
+            android:id="@+id/tracker_unit_subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:text="Small Text"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="@dimen/standard_font_size_small" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true">
+
+        <Chronometer
+            android:id="@+id/tracker_unit_meter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="-16dp"
+            android:background="@color/accent"
+            android:paddingEnd="@dimen/standard_padding"
+            android:paddingStart="12dp"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/standard_font_size"
+            android:visibility="gone" />
+
+        <ToggleButton
+            android:id="@+id/tracker_unit_button"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/standard_padding"
+            android:layout_toLeftOf="@id/tracker_unit_meter"
+            android:background="@drawable/tracker_unit_toggle"
+            android:textOff=""
+            android:textOn="" />
+    </RelativeLayout>
+
+
+    <ImageView
+        android:id="@+id/handle"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/tracker_unit_height"
+        android:layout_gravity="center_vertical|center"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:scaleType="center"
+        android:src="@drawable/ic_reorder_grey_500_24dp"
+        android:visibility="gone" />
+
+</RelativeLayout>
