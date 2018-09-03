@@ -1,5 +1,6 @@
 # Timely
-A time tracking app on Anroid
+A time tracking app on Anroid. The idea of this app is to let you easily track how you spend your time. It support concurrent tracker and a nice reporting view!.
+This is my personal side project, it's a way to practice what I learned from online Android course and build something interesting :).
 
 # Usage
 ## Create a tracker to track task time spending
